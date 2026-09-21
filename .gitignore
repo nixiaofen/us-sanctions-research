@@ -1,0 +1,7 @@
+# 运行产物（监控基线、本地报告），不纳入版本控制
+.ofac_baseline_*.json
+*.report.md
+
+# Python
+__pycache__/
+*.pyc

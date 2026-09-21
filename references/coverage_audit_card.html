@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>美国经济制裁 · 适用计划覆盖核查审计卡</title>
+<style>
+  :root{
+    --bg:#0f1419; --panel:#161b22; --panel2:#1c232c; --line:#2b333d;
+    --txt:#e6edf3; --muted:#9aa7b4; --accent:#58a6ff; --warn:#f0883e;
+    --red:#ff7b72; --green:#56d364; --yellow:#e3b341;
+  }
+  *{box-sizing:border-box;}
+  body{font-family:-apple-system,"Segoe UI","Microsoft YaHei",sans-serif;
+    background:var(--bg); color:var(--txt); margin:0; padding:24px; line-height:1.5;}
+  .wrap{max-width:920px; margin:0 auto;}
+  h1{font-size:21px; margin:0 0 4px;}
+  .sub{color:var(--muted); font-size:13px; margin-bottom:18px;}
+  .meta{display:flex; flex-wrap:wrap; gap:12px; background:var(--panel);
+    border:1px solid var(--line); border-radius:8px; padding:14px; margin-bottom:18px;}
+  .meta label{display:flex; flex-direction:column; font-size:12px; color:var(--muted); gap:4px;}
+  .meta input{background:var(--panel2); border:1px solid var(--line); color:var(--txt);
+    border-radius:5px; padding:6px 8px; font-size:13px; min-width:160px;}
+  .card{background:var(--panel); border:1px solid var(--line); border-radius:8px;
+    padding:16px 18px; margin-bottom:14px;}
+  .card h2{font-size:15px; margin:0 0 4px; color:var(--accent);}
+  .card .src{font-size:12px; color:var(--muted); margin-bottom:10px;}
+  .row{display:flex; gap:10px; align-items:flex-start; padding:7px 0; border-top:1px dashed var(--line);}
+  .row:first-of-type{border-top:none;}
+  input[type=checkbox]{margin-top:4px; width:16px; height:16px; accent-color:var(--green); flex:0 0 auto;}
+  .chk-txt{font-size:13.5px;}
+  .chk-txt b{color:var(--txt);}
+  .tag{display:inline-block; font-size:11px; padding:1px 7px; border-radius:10px; margin-left:6px; vertical-align:middle;}
+  .tag.rel{background:rgba(240,136,62,.16); color:var(--warn); border:1px solid var(--warn);}
+  .tag.sec{background:rgba(255,123,114,.16); color:var(--red); border:1px solid var(--red);}
+  .tag.fifty{background:rgba(227,179,65,.16); color:var(--yellow); border:1px solid var(--yellow);}
+  .note{font-size:12.5px; color:var(--muted); margin-top:8px;}
+  .sign{display:flex; flex-wrap:wrap; gap:18px; background:var(--panel); border:1px solid var(--line);
+    border-radius:8px; padding:14px; margin-top:6px;}
+  .sign label{display:flex; flex-direction:column; font-size:12px; color:var(--muted); gap:4px;}
+  .sign input{background:var(--panel2); border:1px solid var(--line); color:var(--txt);
+    border-radius:5px; padding:6px 8px; font-size:13px; min-width:200px;}
+  .disc{font-size:11.5px; color:var(--muted); margin-top:16px; border-top:1px solid var(--line); padding-top:12px;}
+  .legend{font-size:12px; color:var(--muted); margin-bottom:14px;}
+  @media print{body{background:#fff; color:#000;} .card,.meta,.sign{background:#fff; border-color:#999;}
+    h1,h2{color:#003;}
+    .tag.rel{color:#9a4a00;} .tag.sec{color:#900;} .tag.fifty{color:#7a5c00;}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>美国经济制裁 · 适用计划覆盖核查审计卡</h1>
+  <div class="sub">us-sanctions-research 步骤 1 配套工具｜用途：逐项勾选本案"可能适用的制裁计划 + 关系核查项"，审计 skill 后续输出是否漏查。打印或导出 PDF 存档。</div>
+
+  <div class="legend">图例：
+    <span class="tag rel">关系核查</span> 即便对手名字不在 SDN 上也须落实 ·
+    <span class="tag sec">二级制裁</span> 非美主体亦可能被追 ·
+    <span class="tag fifty">50%规则</span> 未列名子公司可能视同 SDN
+  </div>
+
+  <div class="meta">
+    <label>本案/交易描述<input type="text" placeholder="如：向伊朗对手出口航空备件"></label>
+    <label>对手方名称<input type="text" placeholder="含子公司/UBO"></label>
+    <label>核查日期<input type="text" placeholder="YYYY-MM-DD"></label>
+    <label>核查人<input type="text" placeholder="姓名"></label>
+  </div>
+
+  <div class="card">
+    <h2>伊朗 Iran</h2>
+    <div class="src">授权法 IEEPA｜ITSR 31 CFR 560｜配套 31 CFR 561（NS-ISR/IFSR，多为二级制裁）｜EO 12957/13599/13608/13846/13871/13902</div>
+    <div class="row"><input type="checkbox"><div class="chk-txt">伊朗政府及国有银行 / 中央银行 <span class="tag rel">关系核查</span></div></div>
+    <div class="row"><input type="checkbox"><div class="chk-txt">伊朗金融机构（银行、exchange house、虚拟资产服务商） <span class="tag rel">关系核查</span></div></div>
+    <div class="row"><input type="checkbox"><div class="chk-txt">能源 sector（NIOC/NPC、油气贸易链） <span class="tag rel">关系核查</span> <span class="tag sec">二级制裁</span></div></div>
+    <div class="row"><input type="checkbox"><div class="chk-txt">航运/造船（IRISL 及其 front company） <span class="tag rel">关系核查</span></div></div>
+    <div class="row"><input type="checkbox"><div class="chk-txt">航空（Iran Air、Mahan Air 等） <span class="tag rel">关系核查</span></div></div>
+    <div class="row"><input type="checkbox"><div class="chk-txt">伊斯兰革命卫队 <b>IRGC / IRGC-QF</b> 及其控制网络 <span class="tag rel">关系核查</span></div></div>
+    <div class="row"><input type="checkbox"><div class="chk-txt">受 EO 13902 列名"在伊金融/能源/航运/造船/建筑/采矿行业运营"主体 <span class="tag sec">二级制裁</span></div></div>
+    <div class="row"><input type="checkbox"><div class="chk-txt">50% 规则穿透：未列名子公司是否被 SDN 合计持股 ≥50% <span class="tag fifty">50%规则</span></div></div>
+    <div class="note">常见漏查：只查 SDN 漏掉 561 二级制裁实体；漏查 IRGC 隐蔽网络；非美主体因美元清算/美源投入被二级制裁。</div>
+  </div>
+
+  <div class="card">
+    <h2>也门 / 胡塞 Yemen / Houthi</h2>
+    <div class="src">双轨：也门专项 EO 13611（31 CFR 543）｜胡塞 SDGT 依 EO 13224（31 CFR 594，2024 列名）</div>
+    <div class="row"><input type="checkbox"><div class="chk-txt">Ansar Allah（胡塞武装）及其领导层/军事/采购/财政 wing <span class="tag rel">关系核查</span></div></div>
+    <div class="row"><input type="checkbox"><div class="chk-txt">为胡塞提供资金/武器/燃料/技术的支持网络（含境外 facilitator） <span class="tag rel">关系核查</span></div></div>
+    <div class="row"><input type="checkbox"><div class="chk-txt">对手是否向也门（尤其胡塞控制区）出口燃料/武器/双用物项 <span class="tag rel">关系核查</span></div></div>
+    <div class="row"><input type="checkbox"><div class="chk-txt">对手股东/UBO/历史交易对手是否出现胡塞支持网络成员 <span class="tag rel">关系核查</span></div></div>
+    <div class="row"><input type="checkbox"><div class="chk-txt">是否通过也门港口/受胡塞控制代理行进行货物流转 <span class="tag rel">关系核查</span></div></div>
+    <div class="note">⚠️ 本项源自实战教训：名字不在 SDN ≠ 与胡塞无关联。须同时查 543（也门专项）与 594（胡塞 SDGT）两轨。</div>
+  </div>
+
+  <div class="card">
+    <h2>俄罗斯 Russia</h2>
+    <div class="src">双轨：RuHSR EO 14024（31 CFR 587）｜URESR EO 13660/13661/13662/13685/14071（31 CFR 589）｜注意 BIS 出口管制并行</div>
+    <div class="row"><input type="checkbox"><div class="chk-txt">俄主要银行（PSB/VEB/VTB/Sberbank/Otkritie/Novikombank/Sovcombank） <span class="tag rel">关系核查</span></div></div>
+    <div class="row"><input type="checkbox"><div class="chk-txt">能源（Gazprom/Rosneft/Transneft）与国防（Rostec/UAC/UEC）交易链 <span class="tag rel">关系核查</span></div></div>
+    <div class="row"><input type="checkbox"><div class="chk-txt">寡头与受列名个人（依 14024） <span class="tag rel">关系核查</span></div></div>
+    <div class="row"><input type="checkbox"><div class="chk-txt">克里米亚 / 顿涅茨克-卢甘斯克相关实体或交易（589） <span class="tag rel">关系核查</span></div></div>
+    <div class="row"><input type="checkbox"><div class="chk-txt">50% 规则穿透：未列名俄企子公司是否被 SDN 合计持股 ≥50% <span class="tag fifty">50%规则</span></div></div>
+    <div class="row"><input type="checkbox"><div class="chk-txt">非 SDN 但受行业禁令（如 14071 禁止对俄新投资/特定服务） <span class="tag sec">二级制裁</span></div></div>
+    <div class="note">常见漏查：只查 587（全俄）漏掉 589（克里米亚/乌东）；忽略 EAR 受控物项与 OFAC 制裁交叉。</div>
+  </div>
+
+  <div class="card">
+    <h2>其他高频横向计划（按线索勾选）</h2>
+    <div class="src">以下计划虽非国别，但一笔交易常跨多个计划，须"宁多勿漏"</div>
+    <div class="row"><input type="checkbox"><div class="chk-txt">反恐 SDGT（EO 13224，31 CFR 594）：IRGC/ISIS/基地/真主党等 <span class="tag rel">关系核查</span></div></div>
+    <div class="row"><input type="checkbox"><div class="chk-txt">朝鲜（31 CFR 510）：政府/Workers' Party/黑客组织/涉 WMD <span class="tag rel">关系核查</span></div></div>
+    <div class="row"><input type="checkbox"><div class="chk-txt">网络（EO 13694/13757，31 CFR 578）：恶意网络/勒索软件 <span class="tag rel">关系核查</span></div></div>
+    <div class="row"><input type="checkbox"><div class="chk-txt">毒品（EO 12978，31 CFR 536）：重大卡特尔 <span class="tag rel">关系核查</span></div></div>
+    <div class="row"><input type="checkbox"><div class="chk-txt">不扩散/NPWMD（EO 13382，31 CFR 544）：扩散网络 <span class="tag rel">关系核查</span></div></div>
+    <div class="row"><input type="checkbox"><div class="chk-txt">叙利亚（31 CFR 542）/ 古巴（31 CFR 515）/ 委内瑞拉（31 CFR 591）等综合计划 <span class="tag rel">关系核查</span></div></div>
+  </div>
+
+  <div class="sign">
+    <label>合规官签核<input type="text" placeholder="姓名/日期"></label>
+    <label>外部美制裁律师复核<input type="text" placeholder="律所/意见编号"></label>
+    <label>结论：□ 已覆盖 / □ 仍存疑项（列明）<input type="text" placeholder="存疑项"></label>
+  </div>
+
+  <div class="disc">
+    ⚠️ 免责声明：本审计卡为半自动研究流程的辅助核查工具，所列 EO/CFR 章节为起始索引，可能因法规更新而变化；正式出具合规意见前须以 OFAC Legal Library（eCFR）与制裁计划页实时复核，并咨询具美国制裁执业资格的律师。本卡不构成法律意见。
+  </div>
+</div>
+</body>
+</html>
